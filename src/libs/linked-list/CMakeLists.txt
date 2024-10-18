@@ -1,15 +1,15 @@
-set(LIBRARY_OBJECT "calc_obj")
-set(LIBRARY_SHARED "calc_shared")
-set(LIBRARY_STATIC "calc_static")
+set(LIBRARY_OBJECT "linked_list_obj")
+set(LIBRARY_SHARED "linked_list_shared")
+set(LIBRARY_STATIC "linked_list_static")
 
 # Define source files for the library
 set(LIBRARY_SOURCES
-    "${CMAKE_CURRENT_SOURCE_DIR}/calc.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/linked_list.cpp"
 )
 
 # Define header files for the library
 set(LIBRARY_HEADERS
-    "${CMAKE_CURRENT_SOURCE_DIR}/include/calc/calc.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/ds/linked_list.hpp"
 )
 
 # Specify include directories for the object library
