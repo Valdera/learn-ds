@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['b_25',['b',['../tui_8cpp.html#aaff6cbc9efc43967f16227eb92d63234',1,'tui.cpp']]]
+  ['name_21',['name',['../structBook.html#ae109fa1dd35dd89c4c89515329f597e5',1,'Book']]]
 ];

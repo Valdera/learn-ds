@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['input_5fa_6',['input_a',['../tui_8cpp.html#a93e212b9463f7c2214b83a3d5bfe2c54',1,'tui.cpp']]],
-  ['input_5fb_7',['input_b',['../tui_8cpp.html#a47a21e21c6e77426ece89ed5eb55b531',1,'tui.cpp']]]
+  ['ivyn_4',['Ivyn',['../main_8cpp.html#aa2df4028f474807638d438104900b003a6d7ece729650e4c62f1c92e9a77eb7c3',1,'main.cpp']]]
 ];
