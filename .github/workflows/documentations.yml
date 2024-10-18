@@ -1,0 +1,36 @@
+name: Documentation
+
+on:
+  push:
+    tags:
+      - "*"
+    branches: [ main, master ]
+
+jobs:
+  build:
+    name: Build and publish documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install
+        run: |
+          make install
+          make install_doc
+          make install_conan
+      - name: Prepare
+        run: |
+          make prepare
+      - name: Configure
+        run: |
+          cmake -H. -Bbuild -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="Debug"
+      - name: Building
+        run: |
+          cmake --build build --config Debug --target docs -j4
+      - name: Deploy to GitHub Pages
+        uses: Cecilapp/GitHub-Pages-deploy@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          branch: pages
+          build_dir: ./docs/html
+          email: ''
