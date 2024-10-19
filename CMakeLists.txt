@@ -62,8 +62,8 @@ include(ConfigSafeGuards)
 find_package(Python REQUIRED COMPONENTS Interpreter)
 find_package(Python3 REQUIRED COMPONENTS Interpreter)
 if (Python_FOUND)
-    set(Python_EXECUTABLE ${Python_EXECUTABLE})
-    set(Python3_EXECUTABLE ${Python3_EXECUTABLE})
+  set(Python_EXECUTABLE ${Python_EXECUTABLE})
+  set(Python3_EXECUTABLE ${Python3_EXECUTABLE})
 endif ()
 
 message(STATUS "Python Executable: ${Python_EXECUTABLE}")
@@ -81,8 +81,8 @@ add_clang_format_target()
 #################
 
 if (ENABLE_COVERAGE)
-    include(CodeCoverage)
-    append_coverage_compiler_flags()
+  include(CodeCoverage)
+  append_coverage_compiler_flags()
 endif ()
 
 
@@ -91,7 +91,7 @@ endif ()
 #######
 
 if (ENABLE_LTO)
-    include(LTO)
+  include(LTO)
 endif ()
 
 #############
@@ -99,8 +99,8 @@ endif ()
 #############
 
 if (ENABLE_SANITIZE_ADDR OR ENABLE_SANITIZE_UNDEF)
-    include(Sanitizer)
-    add_sanitizer_flags()
+  include(Sanitizer)
+  add_sanitizer_flags()
 endif ()
 
 ###########################
@@ -111,8 +111,8 @@ endif ()
 # add_git_submodule(external/<lib name>)
 
 if (ENABLE_GIT_SUBMODULE)
-    message(STATUS "Using Git Submodule")
-    include(AddGitSubmodule)
+  message(STATUS "Using Git Submodule")
+  include(AddGitSubmodule)
 endif ()
 
 ###############################
@@ -128,8 +128,8 @@ endif ()
 # FetchContent_MakeAvailable(<package name>)
 
 if (ENABLE_FETCH_CONTENT)
-    message(STATUS "Using Fetch Content")
-    include(FetchContent)
+  message(STATUS "Using Fetch Content")
+  include(FetchContent)
 endif ()
 
 #####################
@@ -140,8 +140,8 @@ endif ()
 # cpmaddpackage("gh:<git username>:<git repo name>#<version number>")
 
 if (ENABLE_CPM)
-    message(STATUS "Using CPM")
-    include(CPM)
+  message(STATUS "Using CPM")
+  include(CPM)
 endif ()
 
 #######################
@@ -149,8 +149,8 @@ endif ()
 #######################
 
 if (ENABLE_CONAN)
-    message(STATUS "Using Conan")
-    include(${CMAKE_BINARY_DIR}/conan/conan_toolchain.cmake)
+  message(STATUS "Using Conan")
+  include(${CMAKE_BINARY_DIR}/conan/conan_toolchain.cmake)
 endif ()
 
 #######################
@@ -158,8 +158,8 @@ endif ()
 #######################
 
 if (ENABLE_VCPKG)
-    message(STATUS "Using VCPKG")
-    include(${CMAKE_SOURCE_DIR}/external/vcpkg/scripts/buildsystems/vcpkg.cmake)
+  message(STATUS "Using VCPKG")
+  include(${CMAKE_SOURCE_DIR}/external/vcpkg/scripts/buildsystems/vcpkg.cmake)
 endif ()
 
 ###############################
@@ -170,6 +170,7 @@ find_package(nlohmann_json REQUIRED)
 find_package(fmt REQUIRED)
 find_package(spdlog REQUIRED)
 find_package(cxxopts REQUIRED)
+find_package(Boost REQUIRED)
 
 ################
 # Subdirectory #
@@ -185,10 +186,10 @@ add_subdirectory(src)
 ################
 
 if (ENABLE_TESTING)
-    message(STATUS "Build unit tests for the project. Tests should always be found in the test folder\n")
-    include(CPM)
-    CPMAddPackage("gh:google/googletest#v1.15.2")
-    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+  message(STATUS "Build unit tests for the project. Tests should always be found in the test folder\n")
+  include(CPM)
+  CPMAddPackage("gh:google/googletest#v1.15.2")
+  set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
-    add_subdirectory(test)
+  add_subdirectory(test)
 endif ()

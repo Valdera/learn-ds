@@ -1,6 +1,7 @@
 from conan import ConanFile
 from conan.tools.cmake import CMakeToolchain
 
+
 class CompressorRecipe(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     generators = "CMakeDeps"
@@ -12,6 +13,7 @@ class CompressorRecipe(ConanFile):
         self.requires("catch2/3.7.0")
         self.requires("cxxopts/3.2.0")
         self.requires("ftxui/5.0.0")
+        self.requires("boost/1.86.0")
 
     def generate(self):
         tc = CMakeToolchain(self)

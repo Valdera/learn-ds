@@ -23,6 +23,7 @@ target_precompile_headers(${APP_NAME} PUBLIC <string>)
 
 # Link the app with other required libraries for the application
 target_link_libraries(${APP_NAME} PUBLIC
+    boost::boost
 )
 
 target_set_warnings(
@@ -33,10 +34,10 @@ target_set_warnings(
     AS_ERRORS
     ${ENABLE_WARNINGS_AS_ERRORS})
 
-if(${ENABLE_LTO})
+if (${ENABLE_LTO})
   target_enable_lto(${APP_NAME} optimized)
-endif()
+endif ()
 
-if(${ENABLE_CLANG_TIDY})
+if (${ENABLE_CLANG_TIDY})
   add_clang_tidy_to_target(${APP_NAME})
-endif()
+endif ()
