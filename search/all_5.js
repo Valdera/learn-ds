@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['linked_5flist_2ecpp_5',['linked_list.cpp',['../linked__list_8cpp.html',1,'']]],
-  ['linked_5flist_2ehpp_6',['linked_list.hpp',['../linked__list_8hpp.html',1,'']]]
+  ['get_16',['get',['../playground_2main_8cpp.html#ac852bb851c326c4ab8dac34073ff9b2c',1,'main.cpp']]],
+  ['get_5fyear_17',['get_year',['../structClockOfTheLongNow.html#a0039fa3e9135a331e6ac260b48776918',1,'ClockOfTheLongNow']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pages_22',['pages',['../structBook.html#af4911f9ba822e0c95ab759f30077539b',1,'Book']]]
+  ['name_95',['name',['../structAvout.html#a1d9e9d0af518123d777c71425e1a1b51',1,'Avout::name()'],['../structCollege.html#a635306470b331c911aea222d593c730b',1,'College::name()']]]
 ];

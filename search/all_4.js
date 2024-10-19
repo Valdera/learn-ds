@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ivyn_4',['Ivyn',['../main_8cpp.html#aa2df4028f474807638d438104900b003a6d7ece729650e4c62f1c92e9a77eb7c3',1,'main.cpp']]]
+  ['final_5fmessage_15',['final_message',['../structBaseClass.html#ade4f7e2aef6ef728f6803ed2e6c36cd1',1,'BaseClass::final_message()'],['../structDerivedClass.html#a8ccf97852895ae08b3f6a828298b0943',1,'DerivedClass::final_message()']]]
 ];
